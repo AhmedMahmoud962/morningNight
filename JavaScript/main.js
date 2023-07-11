@@ -1,0 +1,30 @@
+// in google chrome you can use id in js directly
+
+onscroll=() => {
+    let value=scrollY;
+    stars.style.left=value +"px";
+    moon.style.top=value*3+"px";
+    mountains3.style.top=value*2+"px";
+    mountains4.style.top=value*1.5+"px";
+    river.style.top=value+"px";
+    boat.style.top=value+"px";
+    boat.style.left=value*3+"px";
+    Word.style.fontSize=value+"px";
+    if (scrollY >=70 ) {
+        Word.style.fontSize=70+"px";
+        Word.style.position="fixed";
+        if (scrollY >= 478) {
+            Word.style.display="none";
+        }else
+        {
+            Word.style.display="block";
+        }
+        if (scrollY >= 127 ) {
+            document.querySelector(".main").style.background="linear-gradient(#376281,#10001f)"
+        }else
+        {
+            document.querySelector(".main").style.background="linear-gradient(#200016,#10001f)"
+
+        }
+        }
+}
